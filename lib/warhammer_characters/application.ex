@@ -10,7 +10,8 @@ defmodule WarhammerCharacters.Application do
     children = [
       WarhammerCharactersWeb.Telemetry,
       WarhammerCharacters.Repo,
-      {DNSCluster, query: Application.get_env(:warhammer_characters, :dns_cluster_query) || :ignore},
+      {DNSCluster,
+       query: Application.get_env(:warhammer_characters, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: WarhammerCharacters.PubSub},
       # Start the Finch HTTP client for sending emails
       {Finch, name: WarhammerCharacters.Finch},
