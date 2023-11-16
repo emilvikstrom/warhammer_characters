@@ -18,7 +18,8 @@ defmodule WarhammerCharacters.Application do
       # Start a worker by calling: WarhammerCharacters.Worker.start_link(arg)
       # {WarhammerCharacters.Worker, arg},
       # Start to serve requests, typically the last entry
-      WarhammerCharactersWeb.Endpoint
+      WarhammerCharactersWeb.Endpoint,
+      {AshAuthentication.Supervisor, otp_app: :warhammer_characters}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

@@ -2,8 +2,6 @@ import Config
 
 # Configure your database
 config :warhammer_characters, WarhammerCharacters.Repo,
-  username: "postgres",
-  password: "postgres",
   hostname: "localhost",
   database: "warhammer_characters_dev",
   stacktrace: true,
