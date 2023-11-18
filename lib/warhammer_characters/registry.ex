@@ -1,4 +1,4 @@
-defmodule WarhammerCharacters.Accounts.Registry do
+defmodule WarhammerCharacters.Registry do
   use Ash.Registry,
     extensions: [
       # This extension adds helpful compile time validations
@@ -9,5 +9,9 @@ defmodule WarhammerCharacters.Accounts.Registry do
     entry WarhammerCharacters.Accounts.User
     entry WarhammerCharacters.Accounts.Token
     entry WarhammerCharacters.Character
+    #  entry WarhammerCharacters.Character.Characteristics
+    #  entry WarhammerCharacters.Character.Skill
+    #  entry WarhammerCharacters.Character.Talent
+    #  entry WarhammerCharacters.Character.Trapping
   end
 end

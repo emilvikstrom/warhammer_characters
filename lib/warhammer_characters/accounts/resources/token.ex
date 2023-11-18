@@ -4,7 +4,7 @@ defmodule WarhammerCharacters.Accounts.Token do
     extensions: [AshAuthentication.TokenResource]
 
   token do
-    api WarhammerCharacters.Accounts
+    api WarhammerCharacters.Api
   end
 
   postgres do

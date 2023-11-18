@@ -10,7 +10,7 @@ defmodule WarhammerCharacters.Accounts.User do
   end
 
   authentication do
-    api WarhammerCharacters.Accounts
+    api WarhammerCharacters.Api
 
     strategies do
       password :password do

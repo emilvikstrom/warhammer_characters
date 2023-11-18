@@ -1,7 +1,8 @@
-defmodule WarhammerCharacters.Accounts do
+defmodule WarhammerCharacters.Api do
   use Ash.Api
 
   resources do
-    registry WarhammerCharacters.Accounts.Registry
+    registry WarhammerCharacters.Registry
+    resource WarhammerCharacters.Character
   end
 end
