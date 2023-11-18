@@ -8,10 +8,5 @@ defmodule WarhammerCharacters.Registry do
   entries do
     entry WarhammerCharacters.Accounts.User
     entry WarhammerCharacters.Accounts.Token
-    entry WarhammerCharacters.Character
-    #  entry WarhammerCharacters.Character.Characteristics
-    #  entry WarhammerCharacters.Character.Skill
-    #  entry WarhammerCharacters.Character.Talent
-    #  entry WarhammerCharacters.Character.Trapping
   end
 end

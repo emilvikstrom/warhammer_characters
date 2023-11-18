@@ -3,6 +3,5 @@ defmodule WarhammerCharacters.Api do
 
   resources do
     registry WarhammerCharacters.Registry
-    resource WarhammerCharacters.Character
   end
 end
