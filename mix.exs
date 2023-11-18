@@ -55,7 +55,8 @@ defmodule WarhammerCharacters.MixProject do
       {:ash_postgres, "~> 1.3"},
       {:ash_phoenix, "~> 1.2"},
       {:ash_authentication, "~> 3.11.15"},
-      {:ash_authentication_phoenix, "~> 1.9"}
+      {:ash_authentication_phoenix, "~> 1.9"},
+      {:ash_json_api, "~> 0.33.1"}
     ]
   end
 
