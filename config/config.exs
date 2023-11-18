@@ -8,7 +8,7 @@
 import Config
 
 config :warhammer_characters,
-  ash_apis: [WarhammerCharacters.Accounts],
+  ash_apis: [WarhammerCharacters.Api],
   ecto_repos: [WarhammerCharacters.Repo],
   generators: [timestamp_type: :utc_datetime]
 

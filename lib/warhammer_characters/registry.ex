@@ -8,5 +8,6 @@ defmodule WarhammerCharacters.Accounts.Registry do
   entries do
     entry WarhammerCharacters.Accounts.User
     entry WarhammerCharacters.Accounts.Token
+    entry WarhammerCharacters.Character
   end
 end
