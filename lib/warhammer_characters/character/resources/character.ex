@@ -2,7 +2,17 @@ defmodule WarhammerCharacters.Character do
   alias WarhammerCharacters.Character
 
   use Ash.Resource,
-    data_layer: AshPostgres.DataLayer
+    data_layer: AshPostgres.DataLayer,
+    api: WarhammerCharacters.Api
+
+  code_interface do
+    define_for WarhammerCharacters.Api
+    define :create, action: :create
+    define :read_all, action: :read
+    define :update, action: :update
+    define :destroy, action: :destroy
+    define :get_by_id, args: [:id], action: :by_id
+  end
 
   actions do
     # Add a set of simple actions. You'll customize these later.
@@ -18,6 +28,16 @@ defmodule WarhammerCharacters.Character do
       change manage_relationship(:characteristics, :characteristics, type: :create)
       change manage_relationship(:skills, :skills, type: :create)
       change manage_relationship(:talents, :talents, type: :create)
+    end
+
+    read :by_id do
+      # This action has one argument :id of type :uuid
+      argument :id, :uuid, allow_nil?: false
+      # Tells us we expect this action to return a single result
+      get? true
+      # Filters the `:id` given in the argument
+      # against the `id` of each element in the resource
+      filter expr(id == ^arg(:id))
     end
   end
 
